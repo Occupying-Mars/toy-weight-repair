@@ -1,0 +1,26 @@
+[project]
+name = "toy-weight-repair"
+version = "0.1.0"
+description = "A reproducible planted-circuit test of direct weight repair and prospective behavioral prediction"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy>=2,<3"]
+license = "MIT"
+
+[project.scripts]
+toy-repair = "toy_weight_repair.experiment:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.14,<1"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+"provenance/original-toy-repair.py" = ["ALL"]

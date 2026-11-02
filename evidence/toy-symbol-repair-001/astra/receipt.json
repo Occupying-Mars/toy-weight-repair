@@ -1,0 +1,19 @@
+{
+  "model": "gpt-6-astra",
+  "effort": "high",
+  "answer_source": "output-last-message",
+  "tool_free": true,
+  "unexpected_tools": [],
+  "usage": {
+    "input_tokens": 21949,
+    "cached_input_tokens": 5760,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1004,
+    "reasoning_output_tokens": 358
+  },
+  "seconds": 24.123085874976823,
+  "returncode": 0,
+  "prompt_sha256": "2108ba9531b3f38a68f32beaf82f14b9745b95221af0c061c2b7096d87b34ee4",
+  "answer_sha256": "346046dfd512ad0a6db83f038980350308113010ac349ad022f0f3c43e722a46",
+  "status": "complete"
+}

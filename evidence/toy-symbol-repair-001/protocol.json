@@ -1,0 +1,14 @@
+{
+  "task": "conditional-symbol-copy",
+  "models": 4,
+  "parameters_each": 632,
+  "practice_each": 16,
+  "heldout_each": 112,
+  "max_edits_each": 24,
+  "attempts": 1,
+  "training": false,
+  "synthetic_constructed_circuits": true,
+  "truth_sha256": "5846b322c29c461ad05d456b41181f1cf3647955a88204cc97a5c01b03875f6f",
+  "input_sha256": "70eaafc66668315c08adbdc0ebf6a0354afa0ef5be63dc75ff9a0a3f8245c90a",
+  "source_sha256": "eb28e9f2f6eebabf8861e025e1c9905cb0bb65449fcff3ff54aec369fafb8209"
+}

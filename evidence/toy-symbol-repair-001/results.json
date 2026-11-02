@@ -1,0 +1,151 @@
+{
+  "all_pass": true,
+  "cases": [
+    {
+      "id": "case-1",
+      "damaged": false,
+      "heldout_n": 112,
+      "baseline_correct": 112,
+      "edited_correct": 112,
+      "clean_control_correct": 112,
+      "regressions": 0,
+      "edits": 0,
+      "changed_parameters": 0,
+      "predicted_changed_slices": [],
+      "actual_changed_slices": [],
+      "exact_causal_prediction": true,
+      "predicted_accuracy": 1.0,
+      "mechanism": "already correct: mode gates exactly one symbol detector on, and its reciprocal-scale output weight gives the selected symbol logit 1. all distractor neurons remain inactive on legal inputs. no repair needed.",
+      "pass": true
+    },
+    {
+      "id": "case-2",
+      "damaged": true,
+      "heldout_n": 112,
+      "baseline_correct": 91,
+      "edited_correct": 112,
+      "clean_control_correct": 112,
+      "regressions": 0,
+      "edits": 6,
+      "changed_parameters": 6,
+      "predicted_changed_slices": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "actual_changed_slices": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "exact_causal_prediction": true,
+      "predicted_accuracy": 1.0,
+      "mechanism": "the mode-0 detectors for symbols 1, 2, and 7 route to outputs 2, 7, and 1 respectively. restore their correct destinations using reciprocal activation scales. all other routes are correct and distractor neurons are inactive; only these three complete slices change labels.",
+      "pass": true
+    },
+    {
+      "id": "case-3",
+      "damaged": true,
+      "heldout_n": 112,
+      "baseline_correct": 91,
+      "edited_correct": 112,
+      "clean_control_correct": 112,
+      "regressions": 0,
+      "edits": 6,
+      "changed_parameters": 6,
+      "predicted_changed_slices": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "actual_changed_slices": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "exact_causal_prediction": true,
+      "predicted_accuracy": 1.0,
+      "mechanism": "the mode-0 detectors for symbols 0, 1, and 5 route to outputs 1, 5, and 0 respectively. restore their correct destinations using reciprocal activation scales. all other routes are correct and distractor neurons are inactive; only these three complete slices change labels.",
+      "pass": true
+    },
+    {
+      "id": "case-4",
+      "damaged": true,
+      "heldout_n": 112,
+      "baseline_correct": 91,
+      "edited_correct": 112,
+      "clean_control_correct": 112,
+      "regressions": 0,
+      "edits": 6,
+      "changed_parameters": 6,
+      "predicted_changed_slices": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "actual_changed_slices": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "exact_causal_prediction": true,
+      "predicted_accuracy": 1.0,
+      "mechanism": "the mode-0 detectors for symbols 4, 6, and 7 route to outputs 6, 7, and 4 respectively. restore their correct destinations using reciprocal activation scales. all other routes are correct and distractor neurons are inactive; only these three complete slices change labels.",
+      "pass": true
+    }
+  ]
+}

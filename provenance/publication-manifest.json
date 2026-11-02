@@ -1,0 +1,66 @@
+{
+  "source": "local toy-symbol-repair-001",
+  "files": [
+    {
+      "path": "editor-input.json",
+      "original_sha256": "70eaafc66668315c08adbdc0ebf6a0354afa0ef5be63dc75ff9a0a3f8245c90a",
+      "public_sha256": "70eaafc66668315c08adbdc0ebf6a0354afa0ef5be63dc75ff9a0a3f8245c90a",
+      "transformation": "none"
+    },
+    {
+      "path": "editor-prompt.txt",
+      "original_sha256": "2108ba9531b3f38a68f32beaf82f14b9745b95221af0c061c2b7096d87b34ee4",
+      "public_sha256": "2108ba9531b3f38a68f32beaf82f14b9745b95221af0c061c2b7096d87b34ee4",
+      "transformation": "none"
+    },
+    {
+      "path": "operator-truth.json",
+      "original_sha256": "5846b322c29c461ad05d456b41181f1cf3647955a88204cc97a5c01b03875f6f",
+      "public_sha256": "5846b322c29c461ad05d456b41181f1cf3647955a88204cc97a5c01b03875f6f",
+      "transformation": "none"
+    },
+    {
+      "path": "protocol.json",
+      "original_sha256": "c43820d3088fb65060924caec96dd10de1ab385067a1f1e450b0d7cb2081bee1",
+      "public_sha256": "c43820d3088fb65060924caec96dd10de1ab385067a1f1e450b0d7cb2081bee1",
+      "transformation": "none"
+    },
+    {
+      "path": "results.json",
+      "original_sha256": "042a15114cb666d39de8eec85d0359ac615a55de7ed516b8a660cb42d9268923",
+      "public_sha256": "042a15114cb666d39de8eec85d0359ac615a55de7ed516b8a660cb42d9268923",
+      "transformation": "none"
+    },
+    {
+      "path": "astra/answer.md",
+      "original_sha256": "346046dfd512ad0a6db83f038980350308113010ac349ad022f0f3c43e722a46",
+      "public_sha256": "346046dfd512ad0a6db83f038980350308113010ac349ad022f0f3c43e722a46",
+      "transformation": "none"
+    },
+    {
+      "path": "astra/events.jsonl",
+      "original_sha256": "c22baf096861d4fa829e357ca0041c91fa086a69c786f5ec33db2b9c331baf9d",
+      "public_sha256": "a5c69391f007b29be0c79a28797b020ba7dafea279b65f1cf4b255c9ca4aa3e4",
+      "transformation": "removed internal conversation id; normalized JSON whitespace"
+    },
+    {
+      "path": "astra/receipt.json",
+      "original_sha256": "12585466dca766758d08e54321045dc379d20a0107bb279a98f23c668330f538",
+      "public_sha256": "8923f034376e32584e3e6a92195cb2092a0804698e06a326198d8db8e964e76d",
+      "transformation": "removed internal conversation id"
+    },
+    {
+      "path": "astra/neutral.md",
+      "original_sha256": "9db26da266bd05448800db1d986281ad1a92645dba943c208cd421b97e87fb06",
+      "public_sha256": "9db26da266bd05448800db1d986281ad1a92645dba943c208cd421b97e87fb06",
+      "transformation": "none"
+    }
+  ],
+  "original_source_sha256": "eb28e9f2f6eebabf8861e025e1c9905cb0bb65449fcff3ff54aec369fafb8209",
+  "excluded": [
+    "absolute-path launcher command",
+    "duplicate astra/prompt.txt (identical to editor-prompt.txt)",
+    "empty stderr.log",
+    "placeholder MCP configuration"
+  ]
+}
