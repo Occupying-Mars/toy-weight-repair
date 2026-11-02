@@ -17,6 +17,14 @@ demonstrate controlled synthetic weight repair, with important limits: the circu
 constructed, all failure categories appear in practice, and no naturally learned language
 model mechanism is recovered.
 
+![full behavior before and after repair, with actual effects and the unchanged mode](figures/behavior.png)
+
+*figure 1. case 2, the first damaged fixture in the recorded order. each grid cell is one
+input pair; symbols and colors encode output labels. red outlines mark initial errors.
+white dots identify practice inputs. the changed-label map exactly matches astra's prediction;
+the other switch mode remains unchanged. the grids enumerate 128 legal inputs across both
+modes; the hidden accuracy denominator separately excludes the 16 practice inputs.*
+
 ## 1. motivation and research question
 
 [weight-space programming](https://rikiyat.github.io/blog/weight-space-programming/)
@@ -139,6 +147,12 @@ samples for a population-level significance test.
 
 astra diagnosed these mode-zero output cycles:
 
+![the actual wrong connections and their repaired destinations](figures/circuit.png)
+
+*figure 2. actual output connections for the affected detectors in case 2. three nonzero
+weights are removed and three correct destinations restored; edge labels show their actual
+values. this is a projection of the relevant circuit, not the complete network.*
+
 | case | wrong routing before repair | predicted changed symbols |
 |---|---|---|
 | 2 | 1→2, 2→7, 7→1 | 1, 2, 7 |
@@ -149,6 +163,12 @@ in each case it removed three incorrect output destinations and reinstated the c
 destinations with reciprocal activation-scale weights. the predicted affected slices
 matched exhaustive behavior. the healthy model's explanation correctly identified intact
 gating, reciprocal scales, and inactive distractors; its edit list was empty.
+
+![hidden accuracy before and after editing in all four fixtures](figures/results.png)
+
+*figure 3. hidden accuracy for every fixture, including the untouched healthy control.
+counts are exact over a fixed finite input set. no error bars or independent-sample
+significance claim is appropriate for this four-case, single-conversation demonstration.*
 
 ## 7. interpretation and limitations
 

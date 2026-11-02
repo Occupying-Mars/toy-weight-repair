@@ -7,12 +7,23 @@ a planted defect, predict its behavioral effects, and repair it without training
 from **81.25% to 100%** held-out accuracy, made exact prospective behavioral predictions,
 and left a healthy control unchanged. the recorded agent turn took **24.12 seconds**.
 
+![before and after repair, exact predicted changes, and the unchanged switch mode](figures/behavior.png)
+
+**what changed?** three symbol routes were wrong. astra changed six output weights and
+correctly predicted every affected input. the other switch mode retained all 64 predictions.
+white dots mark practice examples; other cells were excluded from the editor prompt.
+these are exhaustive symbol-task predictions, not image-recognition results.
+
+![actual output connections before and after the six-weight repair](figures/circuit.png)
+
 | case | hidden accuracy before | after | changed parameters | effect prediction |
 |---|---:|---:|---:|---|
 | healthy control | 112/112 | 112/112 | 0 | exact |
 | damaged 1 | 91/112 | 112/112 | 6 | exact |
 | damaged 2 | 91/112 | 112/112 | 6 | exact |
 | damaged 3 | 91/112 | 112/112 | 6 | exact |
+
+![held-out accuracy and edit counts for all four models](figures/results.png)
 
 read the **[technical report](REPORT.md)** for the construction, causal checks, and limits.
 the circuits are hand-constructed: this is a toy demonstration, not evidence of general
@@ -35,6 +46,17 @@ verification checks publication hashes, regenerates the exact fixtures and promp
 the answer matches the event record, and replays the scorer in a temporary directory. it
 does not modify the published evidence. hashes establish consistency, not independent
 attestation of the model service or the time when records were produced.
+
+## reproduce the figures
+
+```sh
+uv sync --locked --group plots
+uv run --group plots python scripts/make_figures.py
+```
+
+the script computes predictions from the original weights and recorded edits. it exports
+all three figures as PNG, SVG, and PDF. [downloadable figures and captions](figures/README.md).
+matplotlib is an optional dependency; offline score verification still needs only numpy.
 
 ## run another live attempt
 
@@ -59,6 +81,7 @@ hidden benchmark. change seeds in the generator for independent fixtures and doc
 - `tests/`: nine targeted fixture/scorer checks
 - `evidence/toy-symbol-repair-001/`: original inputs, prompt, answer, truth, results, and logs
 - `provenance/`: original experiment source and publication hash/transformation manifest
+- `figures/` and `scripts/make_figures.py`: shareable figures and evidence-driven rendering
 - `.github/workflows/`: offline verification and test automation
 
 the public package is extracted from a larger local experiment workspace. original source
